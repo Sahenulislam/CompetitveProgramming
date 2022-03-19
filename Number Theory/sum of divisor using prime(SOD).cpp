@@ -1,6 +1,6 @@
 /*
-    sum of divisor using seive (prime number algorithm)
-    sum of divisor SOD:
+    Number of divisor using seive
+    Number of divisor NOD:
 
     30
     1*30
@@ -8,11 +8,11 @@
     3*10
     5*6
 
-    SOD = 8;
+    NOD = 8;
 
     using prime
-    SOD = 2^2,3^2,5^2
-    SO, SOD =2*2*2
+    NOD = 2^2,3^2,5^2
+    SO, NOD =2*2*2
             =8;
 
 
@@ -53,7 +53,7 @@ int main()
     {
         ll n,cnt=1,k;
         cin>>n;
-        // sum of divisor .. SOD
+        // NOD of divisor .. NOD
         for(ll i=0; prime[i]*prime[i]<=n&&i<prime.size(); i++)
         {
             k=1;
