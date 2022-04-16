@@ -1,3 +1,5 @@
+
+// Direct Algorithm
 #include<bits/stdc++.h>
 using namespace std;
 vector<int>g[10010],path[10010];
