@@ -2,7 +2,7 @@
 using namespace std;
 #define ll long long
 const ll mxn=1e5;
-ll a[mxn+5],freq[mxn+5]= {0},ans[mxn+5],sqt,cnt=0;
+ll a[mxn+5],freq[mxn+5]={0},ans[mxn+5],sqt,cnt=0;
 struct query
 {
     ll idx,l,r;
@@ -57,13 +57,25 @@ int main()
             ll R=Q[i].r;
             L--,R--;
             while(left<L)
-                removed(left++);
+            {
+                removed(left);
+                left++;
+            }
             while(left>L)
-                add(--left);
+            {
+                left--;
+                add(left);
+            }
             while(right<R)
-                add(right++);
+            {
+                right++;
+                add(right);
+            }
             while(right>R)
-                removed(--right);
+            {
+                removed(right);
+                right--;
+            }
             ans[Q[i].idx]=cnt;
         }
         cout<<"Case "<<tt++<<":"<<endl;
