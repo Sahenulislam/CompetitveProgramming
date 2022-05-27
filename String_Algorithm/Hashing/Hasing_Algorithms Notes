@@ -8,7 +8,7 @@ Hash of string="abcd";
   if want to hash value of "cd" = (hash[0..j]-hash[0..(i-1)])/ p^i;
   normally "cd" er hash hishab korle hobe "cd" = 3 + 4.3 = 15 
 
-  cd ber korar jonno minus korte hobe ab r hash ke jeta amra hash[a...b] korlei peye jay
+  cd ber korar jonno minus korte hobe "ab" er hash ke. jeta amra hash[a...b] korlei peye jay
   orthat, 142 theke 7 minus korlei hoye jay = 142-7 = 135 
   somorsha ta holo ekhane amra chay 3 + 4.3 = 15 kintu amra peyechi 3.3^2 + 4.3^3 = 135
   ekhon amra jodi normally jeta peyechi ey value ke 3^2 mani P^i dara divide korlei to
