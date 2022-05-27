@@ -1,1 +1,20 @@
+Hash of string="abcd";
+            lets base=3;
+            hash of string  = 1 + 2.3 + 3.3^2 + 4.3^3
+                            = 1 + 6 + 27 + 108
+                              a   b   c    d
+  so prefix hash of stirng =  1   7   34   142
+  
+  if want to hash value of "cd" = (hash[0..j]-hash[0..(i-1)])/ p^i;
+  normally "cd" er hash hishab korle hobe "cd" = 3 + 4.3 = 15 
 
+  cd ber korar jonno minus korte hobe ab r hash ke jeta amra hash[a...b] korlei peye jay
+  orthat, 142 theke 7 minus korlei hoye jay = 142-7 = 135 
+  somorsha ta holo ekhane amra chay 3 + 4.3 = 15 kintu amra peyechi 3.3^2 + 4.3^3 = 135
+  ekhon amra jodi normally jeta peyechi ey value ke 3^2 mani P^i dara divide korlei to
+  amra peye jabo 135/3^2 = 15;
+  
+  so finally jeta daralo hash(s[i..j]) = (hash(s[0..j])-hash(s[0..(i-1)])) / P^i 
+  
+                                
+                                           
