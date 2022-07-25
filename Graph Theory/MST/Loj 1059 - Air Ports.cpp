@@ -1,11 +1,6 @@
 #include <bits/stdc++.h>
 using namespace std;
 #define ll long long
-#define printv(x) for(ll i=0;i<x.size();i++){if(i+1==x.size())cout<<x[i]<<endl;else cout<<x[i]<<" ";}
-#define printa(x,n) for(ll i=0;i<n;i++){if(i+1==n)cout<<x[i]<<endl;else cout<<x[i]<<" ";}
-#define fast                          \
-    ios_base::sync_with_stdio(false); \
-    cin.tie(NULL);
 #define pb push_back
 
 const ll mxn=1e5+10;
@@ -93,7 +88,6 @@ void MST(ll n,ll k)
 
 int main()
 {
-    //fast
     ll t,tt=1;
     cin>>t;
     while(t--)
