@@ -121,7 +121,7 @@ void SOD(ll n)
 
 void EluersPhiSum()
 {
-    for(int i=2; i<=mxn; i++)
+    for(int i=1; i<=mxn; i++)
         phi[i] = i;
     for(int i =2; i<=mxn; i++)
     {
