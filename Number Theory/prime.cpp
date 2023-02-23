@@ -44,6 +44,30 @@ void primeFactor(ll n)
     return primefac;
 }
 
+**************prime Factorization 0(logn)time with suarray tecnique**********
+
+for(int i=2;i<=1000000;i++)
+{
+    if(v[i].empty())
+    {
+         for(int j=i;j<=1000000;j+=i)
+         {
+              v[j].push_back(i);
+         }
+    }
+}
+for(int i=0;i<n;i++)
+{
+    for(auto &x:v[a[i]])
+    {
+         if(vis[x])
+             last = max(last, vis[x]);
+         vis[x] = i + 1;
+    }
+    ans = max(ans, i - last + 1);
+}
+        
+
 ****************Count divisor**********
 
 void SivOfDivisor()
