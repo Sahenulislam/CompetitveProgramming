@@ -1,3 +1,4 @@
+//LOJ-1437 Beehives
 #include <bits/stdc++.h>
 using namespace std;
 #define ll int
@@ -17,11 +18,9 @@ void BFS(ll u)
     while(!q.empty())
     {
         u=q.front();
-
         q.pop();
         for(auto v:g[u])
         {
-
             if(vis[v]==0)
             {
                 vis[v]=1;
@@ -65,19 +64,15 @@ int main()
            {
                 vis[i]=0;
                parent[i]=-1;
-
            }
             if(vis[i]==0)
                 BFS(i);
-
         }
         if(mn==10000000)
             cout<<"Case "<<tt++<<": "<<"impossible\n";
         else
             cout<<"Case "<<tt++<<": "<<mn<<"\n";
     }
-
-
     return 0;
 }
 
