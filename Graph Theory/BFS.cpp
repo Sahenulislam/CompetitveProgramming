@@ -68,3 +68,50 @@ int main()
     }
     return 0;
 }
+
+
+#include<bits/stdc++.h>
+using namespace std;
+#define ll long long
+const ll mxn=1e5+10;
+vector<ll>g[mxn+10];
+ll vis[mxn+10];
+ll level[mxn+10];
+void BFS(ll u)
+{
+    vis[u]=1;
+    level[u]=0;
+    queue<ll>q;
+    q.push(u);
+    while(!q.empty())
+    {
+        u=q.front();
+        q.pop();
+        for(ll i=0;i<g[u].size();i++)
+        {
+            ll x=g[u][i];
+            if(vis[x]==0)
+            {
+                q.push(x);
+                vis[x]=1;
+                level[x]=level[u]+1;
+            }
+        }
+    }
+}
+
+int main()
+{
+    ll n,m;
+    cin>>n>>m;
+    for(ll i=0;i<m;i++)
+    {
+        ll u,v;
+        cin>>u>>v;
+        g[u].push_back(v);
+        g[v].push_back(u);
+    }
+    BFS(1);
+    cout<<level[5]<<endl;
+}
+
